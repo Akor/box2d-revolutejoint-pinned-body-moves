@@ -1,0 +1,20 @@
+Demonstration of a box2d bug (or self caused error) I expierence.
+
+What I do:
+I connect a dynamic body with a static body to 'pin' it to a fixed position.
+I set up a pivot point to alter the rotation point of the dynamic body.
+I rotate the dynamic body by applying a torque to it.
+
+What happens:
+After some time spend applying torques to the body, the body will move away from
+the pivot point of the joint.
+
+What I expected to happen:
+The dynamic should stay at the pivot point and only move for rotation purposes.
+So that in the Debugdraw the localAnchor would always be drawn ontop of the pivot point.
+
+
+
+Code:
+see file: src/Application.js -> function: createMinimalFailCase
+
